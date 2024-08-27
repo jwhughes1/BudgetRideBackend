@@ -1,0 +1,13 @@
+wireframes ui
+login/sign up: cleint vs driver
+
+throneRide 
+
+optional : dob if you want to enjoy birthday discounts, senior's discount (iddocument)
+
+take ride with the same person (build clientelle for driver)
+
+
+JYRide 
+JYShuttle ( if you have a 7 place vehicle, you can have regular shuttles, same pick up , same dropoff, people who live in the same area or work in the same company can register for shuddle)
+JYExcursion

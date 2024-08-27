@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "86434922-86bd-49c3-a8c0-61c4822fd5d1",
+		"name": "BUDGET RIDE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29226265"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "create client Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numberOfMilesTravelled\":35,\r\n     \"firstName\" :\"mike\",\r\n    \"lastName\" : \"brown\",\r\n    \"email\": \"justin@gmail.com\",\r\n    \"phone\": \"5145126208\",\r\n    \"type\" :\"client\",\r\n    \"dateOfBirth\": \"2000-06-04\",\r\n    \"country\":\"Canada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CLIENT BY ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numberOfMilesTravelled\":35,\r\n     \"firstName\" :\"MIKEss\",\r\n    \"lastName\" : \"jackENUMddds\",\r\n    \"email\": \"justin@gmail.com\",\r\n    \"phone\": \"514-000-0000\",\r\n    \"type\" :\"client\",\r\n    \"dateOfBirth\": \"2000-06-04\",\r\n    \"sex\":\"M\",\r\n    \"country\":\"Canada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/client/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"client",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create driver account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"firstName\" :\"Meganne\",\r\n    \"lastName\" : \"Lavoie\",\r\n    \"email\": \"m@l.com\",\r\n    \"phone\": \"5148938175\",\r\n    \"type\" :\"driver\",\r\n    \"dateOfBirth\": \"2000-06-04\",\r\n    \"sex\":\"M\",\r\n    \"country\":\"Canada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/driver/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"driver",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by phone",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/account/byPhone/5145126208",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"byPhone",
+								"5145126208"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/account/byEmail/justin@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"byEmail",
+								"justin@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ride",
+			"item": [
+				{
+					"name": "create ride",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"client\":{\r\n      \"accountId\":1,\r\n      \"firstName\":\"MIKEss\",\r\n      \"lastName\":\"jackENUMddds\",\r\n      \"email\":\"justin@gmail.com\",\r\n      \"phone\":\"514-000-0000\",\r\n      \"type\":\"client\",\r\n      \"dateOfBirth\":\"2000-06-04\",\r\n      \"sex\":\"M\",\r\n      \"country\":\"Canada\",\r\n      \"numberOfMilesTravelled\":35,\r\n      \"rewards\":null,\r\n      \"paymentInfo\":null\r\n   },\r\n   \"driver\":{\r\n      \"accountId\":2,\r\n      \"firstName\":\"jhon\",\r\n      \"lastName\":\"jackENUMddds\",\r\n      \"email\":\"jun@gmail.com\",\r\n      \"phone\":\"514-000-0000\",\r\n      \"type\":\"driver\",\r\n      \"dateOfBirth\":\"2000-06-04\",\r\n      \"sex\":\"M\",\r\n      \"country\":\"Canada\"\r\n   },\r\n   \"addresses\":[\r\n      {\r\n        \r\n         \"street\":\"Castlefrank rd\",\r\n         \"streetNumber\":\"111\",\r\n         \"city\":\"Kanata\",\r\n         \"postalCode\":\"K2L1T7\",\r\n         \"provinceOrState\":\"ON\",\r\n         \"country\":\"Canada\",\r\n         \"addressType\":\"current\"\r\n      },\r\n      {\r\n        \r\n         \"street\":\"Montreal rd\",\r\n         \"streetNumber\":\"123\",\r\n         \"city\":\"Ottawa\",\r\n         \"postalCode\":\"k1x3f5\",\r\n         \"provinceOrState\":\"ON\",\r\n         \"country\":\"Canada\",\r\n         \"addressType\":\"destination\"\r\n      }\r\n   ],\r\n   \"distanceTraveled\":44,\r\n   \"comments\":\"comments\",\r\n   \"date\":\"2018-02-05T12:59:11.332\",\r\n   \"cost\":12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ride/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ride",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vahicle",
+			"item": [
+				{
+					"name": "create vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n  \r\n{\r\n    \"driverId\":1,\r\n    \"plateNumber\" :\"xyz122\",\r\n    \"vehicleType\": \"diesel\",\r\n    \"numberOfSeats\":\"5\"\r\n}\r\n  \r\n \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicle/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get driver vehicles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n [   \r\n{\r\n    \"plateNumber\" :\"xyz123\",\r\n    \"vehicleType\": \"xl\",\r\n    \"numberOfSeats\":\"5\"\r\n}\r\n ]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicle/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": []
+		},
+		{
+			"name": "http://localhost:8080/account/verification_text/\"15145126208\"",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/account/verification_text/\"15148938175\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"verification_text",
+						"\"15148938175\""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "emailverfication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/account/verification_email/yacinebelaifa@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"verification_email",
+						"yacinebelaifa@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate phone number",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/account/phonevalidation/+15145126208",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"phonevalidation",
+						"+15145126208"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
