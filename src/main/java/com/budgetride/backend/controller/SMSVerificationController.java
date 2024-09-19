@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.budgetride.backend.service.Verification.SMSAccountVerificationService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://budgetridefrontend-411512cf02d1.herokuapp.com/")
 public class SMSVerificationController {
     
     private final SMSAccountVerificationService smsService;
