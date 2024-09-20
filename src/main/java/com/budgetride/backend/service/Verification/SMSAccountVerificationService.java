@@ -10,9 +10,9 @@ import com.twilio.type.PhoneNumber;
 @Service
 public class SMSAccountVerificationService {
 
-
+  
   private final String ACCOUNT_SID = "ACb8cad1d8fb393201e9a76af81754e8f9";  //TODO copy to constants file
-  private final String AUTH_TOKEN = "3522b79b2ad1cc1a99cfa746b5189e26";
+  private final String AUTH_TOKEN = "56b7a86be22ae3234e1c9b37800284b7";
   public int launchTwilio(String toPhoneNumber) {
 
 
